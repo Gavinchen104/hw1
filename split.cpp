@@ -24,7 +24,7 @@ void split(Node*& in, Node*& odds, Node*& evens)
 				Node *temp = new Node;
 				temp = in;
 				in = NULL;
-				odds = odd->next;
+				odds = odds->next;
 				temp = in->next;
 				return split(temp, odds, evens);
 			}
