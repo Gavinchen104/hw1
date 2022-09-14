@@ -32,7 +32,7 @@ size_t ULListStr::size() const
 void ULListStr:: push_back(const std::string& val){
   
   if(empty()){
-    //create a new Item
+    //create a new Item when it is empty
     Item *newitem1 = new Item;
     newitem1->prev = NULL;
     newitem1->next = NULL;
@@ -45,7 +45,7 @@ void ULListStr:: push_back(const std::string& val){
   }
   else{
     if(tail_->last==ARRSIZE){
-      //create new Item 
+      //create new Item when it is not empty
       Item *newitem2 = new Item;
       newitem2->prev = tail_;
       tail_->next = newitem2;
@@ -66,7 +66,7 @@ void ULListStr:: push_back(const std::string& val){
 
 void ULListStr::push_front(const std::string& val){
   if(empty()){
-    //create a new Item
+    //create a new Item when it's empty
     Item *newitem = new Item;
     newitem->prev = NULL;
     newitem->next = NULL;
@@ -79,7 +79,7 @@ void ULListStr::push_front(const std::string& val){
   }
   else{
     if(head_->first==0){
-      //create new Item 
+      //create new Item when it is not empty
       Item *newitem = new Item;
       newitem->prev = NULL;
       newitem->next = head_;
@@ -104,6 +104,7 @@ void ULListStr::pop_back(){
   if(!empty()){
 		
     if(tail_->last == 1 ){
+      //only one string left in the Item
 			
       Item *temp = tail_;
       tail_ = temp->prev;
@@ -125,6 +126,7 @@ void ULListStr::pop_back(){
 void ULListStr::pop_front(){
   if(!empty()){
     if((head_->last - head_->first) == 1){
+      //only one string left in the Item
       Item *temp = head_;
       head_ = temp->next;
       delete temp;

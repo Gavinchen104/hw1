@@ -130,6 +130,7 @@ int main(int argc, char** argv)
  	}
 	cout << endl;
 
+	//pop_back delete all
 	cout << "test to see if pop_back can clear the list"<< endl;
 	n= list.size();
 	for(size_t i =0; i <n; i++){
@@ -164,6 +165,7 @@ int main(int argc, char** argv)
  	}
 	cout << endl;
 
+	//pop_front delete all
 	cout << "test to see if pop_front can clear the list"<< endl;
 	n= list.size();
 	for(size_t i =0; i <n; i++){
